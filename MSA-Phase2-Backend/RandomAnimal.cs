@@ -3,11 +3,6 @@
 
     public class RandomAnimal
     {
-        public Data[] data { get; set; }
-    }
-
-    public class Data
-    {
         public int id { get; set; }
         public string name { get; set; }
         public string latine_name { get; set; }
