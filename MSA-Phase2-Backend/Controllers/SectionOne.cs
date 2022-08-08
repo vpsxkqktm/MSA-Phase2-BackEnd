@@ -1,13 +1,16 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System;
 
+
+
 namespace MSA.Phase2.AmazingApi.Controllers
-{
+{   
 
     [ApiController]
     [Route("[controller]")]
     public class SectionOne : ControllerBase
     {
+        
         private static List<RandomAnimal> randAnimals = new List<RandomAnimal>
         {
           new RandomAnimal
