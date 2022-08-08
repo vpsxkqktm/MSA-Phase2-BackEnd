@@ -13,12 +13,10 @@
             </summary>
             <returns>A 201 Created response</returns>
         </member>
-        <member name="M:MSA.Phase2.AmazingApi.Controllers.SectionOne.GetMuliple">
+        <member name="M:MSA.Phase2.AmazingApi.Controllers.SectionOne.GetRandomAnimal">
             <summary>
             Multiplies two numbers together
             </summary>
-            <param name="left">The number on the left, which must be a positive integer</param>
-            <param name="right">The number on the right, which must be a positive integer</param>
             <returns>The muliple of the input numbers</returns>
         </member>
         <member name="M:MSA.Phase2.AmazingApi.Controllers.SectionOne.SectionOnePut">

@@ -24,7 +24,7 @@ namespace MSA.Phase2.AmazingApi.Controllers
             {
                 throw new ArgumentNullException(nameof(clientFactory));
             }
-            _client = clientFactory.CreateClient("randAnimal");
+            _client = clientFactory.CreateClient("animals");
         }
 
         /// <summary>
@@ -33,10 +33,10 @@ namespace MSA.Phase2.AmazingApi.Controllers
         /// <returns>A 201 Created response</returns>
         [HttpPost]
         [ProducesResponseType(201)]
-        public async Task<IActionResult> SectionOnePost()
+        public async Task<ActionResult<List<RandomAnimal>>> SectionOnePost()
         {
             RandomAnimal randAnimal;
-            var res = await _client.GetAsync("x");
+            var res = await _client.GetAsync("https://zoo-animal-api.herokuapp.com/animals/rand/1");
 
             randAnimal = await res.Content.ReadFromJsonAsync<RandomAnimal>();
             Console.WriteLine(res);
@@ -47,16 +47,18 @@ namespace MSA.Phase2.AmazingApi.Controllers
         /// <summary>
         /// Multiplies two numbers together
         /// </summary>
-        /// <param name="left">The number on the left, which must be a positive integer</param>
-        /// <param name="right">The number on the right, which must be a positive integer</param>
         /// <returns>The muliple of the input numbers</returns>
         [HttpGet]
         [Route("Animal")]
         [ProducesResponseType(200)]
-        [ProducesResponseType(400)]
-        public IActionResult GetMuliple()
+        public async Task<ActionResult<List<RandomAnimal>>> GetRandomAnimal()
         {
-            return Ok(randAnimals);
+            RandomAnimal randAnimal;
+            var res = await _client.GetAsync("rand");
+            var content = await res.Content.ReadAsStringAsync();
+            //randAnimal = await res.Content.ReadFromJsonAsync<RandomAnimal>();
+            //System.Diagnostics.Debug.WriteLine(_client. + " HELLWHELLWHELLWHELLWHELLWHELLWHELLWHELLWHELLWHELLWHELLWHELLWHELLWHELLWHELLWHELLWHELLWHELLWHELLWHELLWHELLW");
+            return Ok(content);
         }
 
         /// <summary>

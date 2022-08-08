@@ -13,9 +13,9 @@ builder.Services.AddSwaggerDocument(options =>
 
 });
 
-builder.Services.AddHttpClient(builder.Configuration["RandomAnimals"], configureClient: client =>
+builder.Services.AddHttpClient(builder.Configuration["AnimalsClientName"], configureClient: client =>
 {
-    client.BaseAddress = new Uri(builder.Configuration["RandomAnimalsAddress"]);
+    client.BaseAddress = new Uri(builder.Configuration["AnimalsAddress"]);
 });
 var app = builder.Build();
 
