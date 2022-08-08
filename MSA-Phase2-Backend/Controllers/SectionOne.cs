@@ -1,28 +1,31 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MSA_Phase2_Backend.Data;
+using MSA_Phase2_Backend.Model;
 using System;
 
 
 
 namespace MSA.Phase2.AmazingApi.Controllers
-{   
+{
 
     [ApiController]
     [Route("[controller]")]
     public class SectionOne : ControllerBase
     {
-        
-        private static List<RandomAnimal> randAnimals = new List<RandomAnimal>
+        private readonly IAnimalRepository _repository;
+        private readonly HttpClient _client;
+
+        /*private static List<RandomAnimal> randAnimals = new List<RandomAnimal>
         {
           new RandomAnimal
           {
 
           }
-        };
+        };*/
 
-        private readonly HttpClient _client;
-        /// <summary />
-        public SectionOne(IHttpClientFactory clientFactory)
-        {
+        public SectionOne(IAnimalRepository repository, IHttpClientFactory clientFactory)
+        { 
+            _repository = repository;
             if (clientFactory is null)
             {
                 throw new ArgumentNullException(nameof(clientFactory));
@@ -30,80 +33,96 @@ namespace MSA.Phase2.AmazingApi.Controllers
             _client = clientFactory.CreateClient("animals");
         }
 
-        /// <summary>
-        /// Section posting action to add animals
-        /// </summary>
-        /// <returns>A 201 Created response</returns>
-        [HttpPost]
-        [ProducesResponseType(201)]
-        public async Task<ActionResult<List<RandomAnimal>>> SectionOnePost(RandomAnimal animal)
-        {
-            randAnimals.Add(animal);
+        /// <summary />
 
-            return Ok(randAnimals);
+        /// <summary>
+        /// Using Dependency Injection to get all Animals
+        /// </summary>
+        [HttpGet]
+        [Route("AllAnimal")]
+        [ProducesResponseType(200)]
+        public async Task<ActionResult<IEnumerable<RandomAnimal>>> GetAllAnimals()
+        {
+            //var res = await _client.GetAsync("rand");
+            //var content = await res.Content.ReadAsStringAsync();
+            //randAnimal = await res.Content.ReadFromJsonAsync<RandomAnimal>();
+            //randAnimals.Add(randAnimal);
+            var animals = _repository.getAllAnimal();
+            if (animals.Count == 0)
+            {
+                return BadRequest("animal not found.");
+            }
+            return Ok(animals);
         }
+
         /// <summary>
         /// Get random animal from another API
         /// </summary>
+        /// 
+        
         [HttpGet]
         [Route("RandAnimal")]
         [ProducesResponseType(200)]
-        public async Task<ActionResult<List<RandomAnimal>>> GetRandomAnimal()
+        public async Task<ActionResult<IEnumerable<RandomAnimal>>> GetRandomAnimal()
         {
-            RandomAnimal randAnimal;
+            //RandomAnimal randAnimal;
             var res = await _client.GetAsync("rand");
-            //var content = await res.Content.ReadAsStringAsync();
-            randAnimal = await res.Content.ReadFromJsonAsync<RandomAnimal>();
-            randAnimals.Add(randAnimal);
-            return Ok(randAnimal);
+            var content = await res.Content.ReadAsStringAsync();
+            //animals = await res.Content.ReadFromJsonAsync<RandomAnimal>();
+            _repository.getRandAnimal(await res.Content.ReadFromJsonAsync<RandomAnimal>());
+            //randAnimals.Add(randAnimal);
+            return Ok(content);
         }
 
-
+        
+        
         /// <summary>
         /// Get animal from API
         /// </summary>
         [HttpGet]
         [Route("Animal")]
         [ProducesResponseType(200)]
-        public async Task<ActionResult<List<RandomAnimal>>> GetAnimal(int id)
+        public async Task<ActionResult<IEnumerable<RandomAnimal>>> GetAnimal(int id)
         {
-            var animal = randAnimals.Find(a => a.id == id);
-            if (animal == null)
+
+            var result = _repository.getAnimal(id);
+            if (result.Count == 0)
             {
                 return BadRequest("animal not found.");
             }
-            return Ok(animal);
+            return Ok(result);
         }
+        
+        /// <summary>
+        /// Section posting action to add animals
+        /// </summary>
+        /// <returns>A 201 Created response</returns>
+        
+        [HttpPost]
+        [ProducesResponseType(201)]
+        public async Task<ActionResult<IEnumerable<RandomAnimal>>> SectionOnePost(RandomAnimal animal)
+        {
+            var result = _repository.sectionOnePost(animal);
+            return Ok(result);
+        }
+        
+
+
+        
         /// <summary>
         /// SectionOne put action to update exist animal
         /// </summary>
         /// <returns>A 201 Created Response></returns>
         [HttpPut]
         [ProducesResponseType(201)]
-        public async Task<ActionResult<List<RandomAnimal>>> SectionOnePut(RandomAnimal request)
+        public async Task<ActionResult<IEnumerable<RandomAnimal>>> SectionOnePut(RandomAnimal request)
         {
-            var animal = randAnimals.Find(a => a.id == request.id);
-            if (animal == null)
-            {
-                return BadRequest("animal not found.");
-            }
-            animal.name = request.name;
-            animal.latine_name = request.latine_name;
-            animal.animal_type = request.animal_type;
-            animal.active_time = request.active_time;
-            animal.length_min = request.length_min;
-            animal.length_max = request.length_max;
-            animal.weight_min = request.weight_min;
-            animal.weight_max = request.weight_max;
-            animal.lifespan = request.lifespan;
-            animal.habitat = request.habitat;
-            animal.diet = request.diet;
-            animal.geo_range = request.geo_range;
-            animal.image_link = request.image_link;
+            var result = _repository.sectionOnePut(request);
+            
 
-            return Ok(randAnimals);
+            return Ok(result);
         }
-
+        
         /// <summary>
         /// Delete animal
         /// </summary>
@@ -111,14 +130,17 @@ namespace MSA.Phase2.AmazingApi.Controllers
         [ProducesResponseType(204)]
         public async Task<ActionResult<List<RandomAnimal>>> DemonstrateDelete(int id)
         {
-            var animal = randAnimals.Find(a => a.id == id);
-            if (animal == null)
+            var result = _repository.demonstrateDelete(id);
+            
+            if (result == null)
             {
                 return BadRequest("animal not found.");
             }
-            randAnimals.Remove(animal);
+            
 
-            return Ok(animal);
+            return Ok(result.name + "has been deleted.");
         }
+        
     }
+        
 }

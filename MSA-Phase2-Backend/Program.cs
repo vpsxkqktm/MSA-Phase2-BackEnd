@@ -1,7 +1,12 @@
+using MSA_Phase2_Backend.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+//Adding My Dependencies
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddTransient<IAnimalRepository, AnimalRepository>();
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -31,6 +36,8 @@ var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 
+//app.UseSwagger();
+//app.UseSwaggerUi();
 app.UseOpenApi();
 app.UseSwaggerUi3();
 

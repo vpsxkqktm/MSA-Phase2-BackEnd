@@ -1,4 +1,4 @@
-﻿namespace MSA.Phase2.AmazingApi
+﻿namespace MSA_Phase2_Backend.Model
 {
 
     public class RandomAnimal
@@ -17,7 +17,7 @@
         public string diet { get; set; }
         public string geo_range { get; set; }
         public string image_link { get; set; }
-        
+
     }
 
 }
