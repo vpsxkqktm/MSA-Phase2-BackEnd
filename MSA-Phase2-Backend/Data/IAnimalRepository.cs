@@ -1,4 +1,4 @@
-﻿using MSA_Phase2_Backend.Model;
+﻿using MSA_Phase2_Backend.Models;
 
 namespace MSA_Phase2_Backend.Data
 {
@@ -6,7 +6,7 @@ namespace MSA_Phase2_Backend.Data
     {
         List<RandomAnimal> getAllAnimal();
         List<RandomAnimal> getRandAnimal(Object data);
-        List<RandomAnimal> getAnimal(int id);
+        RandomAnimal getAnimal(int id);
         List<RandomAnimal> sectionOnePost(RandomAnimal animal);
         RandomAnimal sectionOnePut(RandomAnimal request);
         RandomAnimal demonstrateDelete(int id);

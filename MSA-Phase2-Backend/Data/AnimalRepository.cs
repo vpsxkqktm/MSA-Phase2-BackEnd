@@ -1,4 +1,4 @@
-﻿using MSA_Phase2_Backend.Model;
+﻿using MSA_Phase2_Backend.Models;
 
 namespace MSA_Phase2_Backend.Data
 {
@@ -23,10 +23,10 @@ namespace MSA_Phase2_Backend.Data
             return animals;
         }
 
-        public List<RandomAnimal> getAnimal(int id)
+        public RandomAnimal getAnimal(int id)
         {
-            animals.Find(a => a.id == id);
-            return animals;
+            var result = animals.Find(a => a.id == id);
+            return result;
         }
 
         public List<RandomAnimal> sectionOnePost(RandomAnimal animal)

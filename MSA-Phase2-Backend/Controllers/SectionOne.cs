@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MSA_Phase2_Backend.Data;
-using MSA_Phase2_Backend.Model;
+using MSA_Phase2_Backend.Models;
 using System;
 
 
@@ -67,11 +67,12 @@ namespace MSA.Phase2.AmazingApi.Controllers
         {
             //RandomAnimal randAnimal;
             var res = await _client.GetAsync("rand");
-            var content = await res.Content.ReadAsStringAsync();
+            //var content = await res.Content.ReadAsStringAsync();
             //animals = await res.Content.ReadFromJsonAsync<RandomAnimal>();
-            _repository.getRandAnimal(await res.Content.ReadFromJsonAsync<RandomAnimal>());
+            var result = await res.Content.ReadFromJsonAsync<RandomAnimal>();
+            _repository.getRandAnimal(result);
             //randAnimals.Add(randAnimal);
-            return Ok(content);
+            return Ok(result);
         }
 
         
@@ -79,14 +80,14 @@ namespace MSA.Phase2.AmazingApi.Controllers
         /// <summary>
         /// Get animal from API
         /// </summary>
-        [HttpGet]
+        [HttpGet("{id}")]
         [Route("Animal")]
         [ProducesResponseType(200)]
         public async Task<ActionResult<IEnumerable<RandomAnimal>>> GetAnimal(int id)
         {
 
             var result = _repository.getAnimal(id);
-            if (result.Count == 0)
+            if (result == null)
             {
                 return BadRequest("animal not found.");
             }

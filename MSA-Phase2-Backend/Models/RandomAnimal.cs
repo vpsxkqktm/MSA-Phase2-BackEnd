@@ -1,4 +1,4 @@
-﻿namespace MSA_Phase2_Backend.Model
+﻿namespace MSA_Phase2_Backend.Models
 {
 
     public class RandomAnimal
