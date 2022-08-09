@@ -137,3 +137,7 @@ C:\Users\sd159\source\repos\MSA-Phase2-Backend\SectionThree.Test1\bin\Debug\net6
 C:\Users\sd159\source\repos\MSA-Phase2-Backend\SectionThree.Test1\bin\Debug\net6.0\xunit.runner.utility.netcoreapp10.dll
 C:\Users\sd159\source\repos\MSA-Phase2-Backend\SectionThree.Test1\bin\Debug\net6.0\AutoFixture.dll
 C:\Users\sd159\source\repos\MSA-Phase2-Backend\SectionThree.Test1\bin\Debug\net6.0\Fare.dll
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\SectionThree.Test1\bin\Debug\net6.0\FluentAssertions.dll
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\SectionThree.Test1\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\SectionThree.Test1\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\SectionThree.Test1\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll

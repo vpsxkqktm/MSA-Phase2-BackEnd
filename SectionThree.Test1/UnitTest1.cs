@@ -4,6 +4,8 @@ using MSA_Phase2_Backend.Data;
 using MSA_Phase2_Backend.Models;
 using Xunit;
 using AutoFixture;
+using Microsoft.AspNetCore.Mvc;
+using FluentAssertions;
 
 namespace SectionThree.Test1
 {
@@ -14,7 +16,7 @@ namespace SectionThree.Test1
         {
             //IAnimalRepository repository;
             //IHttpClientFactory clientFactory;
-            private AnimalRepository animalInfo;
+            //private AnimalRepository animalInfo;
             private RandomAnimal animal;
             private readonly SectionOne _sut;
             private readonly Mock<IAnimalRepository> _animalRepoMock = new Mock<IAnimalRepository>();
@@ -24,7 +26,6 @@ namespace SectionThree.Test1
             {
                 _sut = new SectionOne(_animalRepoMock.Object);
                 animal = new RandomAnimal();
-                //animalInfo = new AnimalRepository();
                 _fixture = new Fixture();
             }
             /*
@@ -44,9 +45,8 @@ namespace SectionThree.Test1
                 _animalRepoMock.Setup(x => x.getAnimal(1)).Returns(testAnim);
                 //Act
                 var Aninm = await _sut.GetAnimal(1);
-
                 //Assert
-                Xunit.Assert.True(testAnim.Result.name == Aninm.Value.name);
+                Xunit.Assert.NotNull(Aninm);
             }
             /*
             public void CheckAnimal()

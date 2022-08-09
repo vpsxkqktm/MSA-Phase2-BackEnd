@@ -87,8 +87,18 @@ namespace MSA_Phase2_Backend.Data
             animal.geo_range = request.geo_range;
             animal.image_link = request.image_link;
             */
-            _context.Entry(request).State = EntityState.Modified;
-            await _context.SaveChangesAsync();
+            try
+            {
+                _context.Entry(request).State = EntityState.Modified;
+                await _context.SaveChangesAsync();
+
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                throw;
+            }
+
+            
             return request;
         }
 

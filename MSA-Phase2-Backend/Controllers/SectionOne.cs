@@ -97,7 +97,10 @@ namespace MSA.Phase2.AmazingApi.Controllers
         public async Task<ActionResult<IEnumerable<RandomAnimal>>> SectionOnePut(RandomAnimal request)
         {
             var result = _repository.sectionOnePut(request);
-            
+            if (result == null)
+            {
+                return BadRequest("animal does not exist");
+            }
 
             return Ok(result);
         }
