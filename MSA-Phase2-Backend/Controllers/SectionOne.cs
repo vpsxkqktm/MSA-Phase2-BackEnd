@@ -13,7 +13,6 @@ namespace MSA.Phase2.AmazingApi.Controllers
     public class SectionOne : ControllerBase
     {
         private readonly IAnimalRepository _repository;
-        private readonly HttpClient _client;
 
         /*private static List<RandomAnimal> randAnimals = new List<RandomAnimal>
         {
@@ -23,17 +22,11 @@ namespace MSA.Phase2.AmazingApi.Controllers
           }
         };*/
 
-        public SectionOne(IAnimalRepository repository, IHttpClientFactory clientFactory)
+        public SectionOne(IAnimalRepository repository)
         { 
             _repository = repository;
-            if (clientFactory is null)
-            {
-                throw new ArgumentNullException(nameof(clientFactory));
-            }
-            _client = clientFactory.CreateClient("animals");
+            ;
         }
-
-        
 
         /// <summary />
 
@@ -43,7 +36,7 @@ namespace MSA.Phase2.AmazingApi.Controllers
         [HttpGet]
         [Route("AllAnimal")]
         [ProducesResponseType(200)]
-        public async Task<ActionResult<IEnumerable<RandomAnimal>>> GetAllAnimals()
+        public async Task<ActionResult<List<RandomAnimal>>> GetAllAnimals()
         {
             //var res = await _client.GetAsync("rand");
             //var content = await res.Content.ReadAsStringAsync();
@@ -57,24 +50,7 @@ namespace MSA.Phase2.AmazingApi.Controllers
             return Ok(animals);
         }
 
-        /// <summary>
-        /// Get random animal from another API
-        /// </summary>
         
-        [HttpGet]
-        [Route("RandAnimal")]
-        [ProducesResponseType(200)]
-        public async Task<ActionResult<RandomAnimal>> GetRandomAnimal()
-        {
-            //RandomAnimal randAnimal;
-            var res = await _client.GetAsync("rand");
-            //var content = await res.Content.ReadAsStringAsync();
-            //animals = await res.Content.ReadFromJsonAsync<RandomAnimal>();
-            var result = await res.Content.ReadFromJsonAsync<RandomAnimal>();
-            _repository.getRandAnimal(result);
-            //randAnimals.Add(randAnimal);
-            return Ok(result);
-        }
 
         
         

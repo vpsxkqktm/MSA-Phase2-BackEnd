@@ -6,7 +6,11 @@ namespace MSA_Phase2_Backend.Data
     {
         public static List<RandomAnimal> animals = new List<RandomAnimal>()
         {
-            
+            //For testing
+            new RandomAnimal()
+            {
+
+            }
         };
 
 

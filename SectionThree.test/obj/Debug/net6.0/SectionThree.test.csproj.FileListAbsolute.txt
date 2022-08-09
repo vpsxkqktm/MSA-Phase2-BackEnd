@@ -1,0 +1,6 @@
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\SectionThree.test\bin\Debug\net6.0\CoverletSourceRootsMapping
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\SectionThree.test\obj\Debug\net6.0\SectionThree.test.csproj.AssemblyReference.cache
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\SectionThree.test\obj\Debug\net6.0\SectionThree.test.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\SectionThree.test\obj\Debug\net6.0\SectionThree.test.AssemblyInfoInputs.cache
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\SectionThree.test\obj\Debug\net6.0\SectionThree.test.AssemblyInfo.cs
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\SectionThree.test\obj\Debug\net6.0\SectionThree.test.csproj.CoreCompileInputs.cache
