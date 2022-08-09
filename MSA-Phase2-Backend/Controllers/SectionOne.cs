@@ -33,6 +33,8 @@ namespace MSA.Phase2.AmazingApi.Controllers
             _client = clientFactory.CreateClient("animals");
         }
 
+        
+
         /// <summary />
 
         /// <summary>
@@ -58,12 +60,11 @@ namespace MSA.Phase2.AmazingApi.Controllers
         /// <summary>
         /// Get random animal from another API
         /// </summary>
-        /// 
         
         [HttpGet]
         [Route("RandAnimal")]
         [ProducesResponseType(200)]
-        public async Task<ActionResult<IEnumerable<RandomAnimal>>> GetRandomAnimal()
+        public async Task<ActionResult<RandomAnimal>> GetRandomAnimal()
         {
             //RandomAnimal randAnimal;
             var res = await _client.GetAsync("rand");
@@ -83,7 +84,7 @@ namespace MSA.Phase2.AmazingApi.Controllers
         [HttpGet("{id}")]
         [Route("Animal")]
         [ProducesResponseType(200)]
-        public async Task<ActionResult<IEnumerable<RandomAnimal>>> GetAnimal(int id)
+        public async Task<ActionResult<RandomAnimal>> GetAnimal(int id)
         {
 
             var result = _repository.getAnimal(id);
@@ -101,7 +102,7 @@ namespace MSA.Phase2.AmazingApi.Controllers
         
         [HttpPost]
         [ProducesResponseType(201)]
-        public async Task<ActionResult<IEnumerable<RandomAnimal>>> SectionOnePost(RandomAnimal animal)
+        public async Task<ActionResult<RandomAnimal>> SectionOnePost(RandomAnimal animal)
         {
             var result = _repository.sectionOnePost(animal);
             return Ok(result);

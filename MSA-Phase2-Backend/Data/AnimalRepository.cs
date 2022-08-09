@@ -15,12 +15,13 @@ namespace MSA_Phase2_Backend.Data
             return animals;
         }
 
-        public List<RandomAnimal> getRandAnimal(Object data)
+        public RandomAnimal getRandAnimal(Object data)
         {
             //var content = await res.Content.ReadAsStringAsync();
             //var da = await data.Content.ReadFromJsonAsync<RandomAnimal>();
-            animals.Add((RandomAnimal)data);
-            return animals;
+            var result = (RandomAnimal)data;
+            animals.Add(result);
+            return result;
         }
 
         public RandomAnimal getAnimal(int id)
@@ -29,10 +30,10 @@ namespace MSA_Phase2_Backend.Data
             return result;
         }
 
-        public List<RandomAnimal> sectionOnePost(RandomAnimal animal)
+        public RandomAnimal sectionOnePost(RandomAnimal animal)
         {
             animals.Add(animal);
-            return animals;
+            return animal;
         }
         public RandomAnimal sectionOnePut(RandomAnimal request)
         {
