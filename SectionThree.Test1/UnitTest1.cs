@@ -3,6 +3,7 @@ using MSA.Phase2.AmazingApi.Controllers;
 using MSA_Phase2_Backend.Data;
 using MSA_Phase2_Backend.Models;
 using Xunit;
+using AutoFixture;
 
 namespace SectionThree.Test1
 {
@@ -17,13 +18,14 @@ namespace SectionThree.Test1
             private RandomAnimal animal;
             private readonly SectionOne _sut;
             private readonly Mock<IAnimalRepository> _animalRepoMock = new Mock<IAnimalRepository>();
-
+            private readonly IFixture _fixture;
 
             public AnimalTests()
             {
                 _sut = new SectionOne(_animalRepoMock.Object);
                 animal = new RandomAnimal();
-                animalInfo = new AnimalRepository();
+                //animalInfo = new AnimalRepository();
+                _fixture = new Fixture();
             }
             /*
             [SetUp]
@@ -35,15 +37,16 @@ namespace SectionThree.Test1
             }
             */
             [Fact]
-            public async Task GetAllAnimalssync_ShouldReturnAnimal_WhenAnimalExists()
+            public async Task GetAllAnimalsAsync_ShouldReturnAnimal_WhenAnimalExists()
             {
                 //Arrange
-                var list = new List<RandomAnimal> { };
-                _animalRepoMock.Setup(x => x.getAllAnimal()).Returns(list);
+                var testAnim = _fixture.Create<Task<RandomAnimal>>();
+                _animalRepoMock.Setup(x => x.getAnimal(1)).Returns(testAnim);
                 //Act
-                var animals = animalInfo.getAllAnimal();
+                var Aninm = await _sut.GetAnimal(1);
+
                 //Assert
-                Xunit.Assert.Equal(list, animals);
+                Xunit.Assert.True(testAnim.Result.name == Aninm.Value.name);
             }
             /*
             public void CheckAnimal()

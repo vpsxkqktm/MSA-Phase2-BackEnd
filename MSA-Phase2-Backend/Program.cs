@@ -8,9 +8,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 //Adding My Dependencies
 builder.Services.AddHttpContextAccessor();
-builder.Services.AddTransient<IAnimalRepository, AnimalRepository>();
+
 builder.Services.AddControllers();
-builder.Services.AddDbContext<RandomAnimalDbContext>(optionts => optionts.UseInMemoryDatabase(builder.Configuration["MyDb"]));
+builder.Services.AddDbContext<RandomAnimalDbContext>(optionts => optionts.UseInMemoryDatabase("RandAnimal"));
+builder.Services.AddScoped<IAnimalRepository, AnimalRepository>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -30,6 +31,30 @@ if (builder.Environment.IsDevelopment()){
 
 var app = builder.Build();
 
+var db = app.Services.CreateScope().ServiceProvider.GetService<RandomAnimalDbContext>();
+
+//default input for testing
+var animal = new RandomAnimal
+{
+    id = 1,
+    name = "test",
+    latine_name = "test",
+    animal_type = "test",
+    active_time = "test",
+    length_min = 0,
+    length_max = 0,
+    weight_min = 0,
+    weight_max = 0,
+    diet = "test",
+    geo_range = "test",
+    habitat = "test",
+    image_link = "text",
+    lifespan = 0,
+
+};
+
+db.RandAnimal.Add(animal);
+db.SaveChanges();
 
 // Configure the HTTP request pipeline.
 
@@ -46,3 +71,6 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+
+

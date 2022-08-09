@@ -25,31 +25,32 @@ namespace MSA.Phase2.AmazingApi.Controllers
         public SectionOne(IAnimalRepository repository)
         { 
             _repository = repository;
-            ;
         }
 
         /// <summary />
 
+
+        
         /// <summary>
         /// Using Dependency Injection to get all Animals
         /// </summary>
         [HttpGet]
         [Route("AllAnimal")]
         [ProducesResponseType(200)]
-        public async Task<ActionResult<List<RandomAnimal>>> GetAllAnimals()
+        public async Task<ActionResult<IEnumerable<RandomAnimal>>> GetAllAnimals()
         {
             //var res = await _client.GetAsync("rand");
             //var content = await res.Content.ReadAsStringAsync();
             //randAnimal = await res.Content.ReadFromJsonAsync<RandomAnimal>();
             //randAnimals.Add(randAnimal);
-            var animals = _repository.getAllAnimal();
-            if (animals.Count == 0)
+            var animals = await _repository.getAllAnimal();
+            if (animals == null)
             {
                 return BadRequest("animal not found.");
             }
             return Ok(animals);
         }
-
+        
         
 
         
@@ -63,12 +64,12 @@ namespace MSA.Phase2.AmazingApi.Controllers
         public async Task<ActionResult<RandomAnimal>> GetAnimal(int id)
         {
 
-            var result = _repository.getAnimal(id);
-            if (result == null)
+            var animal = await _repository.getAnimal(id);
+            if (animal == null)
             {
                 return BadRequest("animal not found.");
             }
-            return Ok(result);
+            return Ok(animal);
         }
         
         /// <summary>
@@ -80,8 +81,8 @@ namespace MSA.Phase2.AmazingApi.Controllers
         [ProducesResponseType(201)]
         public async Task<ActionResult<RandomAnimal>> SectionOnePost(RandomAnimal animal)
         {
-            var result = _repository.sectionOnePost(animal);
-            return Ok(result);
+            await _repository.sectionOnePost(animal);
+            return CreatedAtAction(nameof(GetAnimal), new { id = animal.id }, animal);
         }
         
 
@@ -116,7 +117,7 @@ namespace MSA.Phase2.AmazingApi.Controllers
             }
             
 
-            return Ok(result.name + "has been deleted.");
+            return Ok("the animal has been deleted.");
         }
         
     }

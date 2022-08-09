@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "SectionThree.Test1/1.0.0": {
         "dependencies": {
+          "AutoFixture": "4.17.0",
           "MSA-Phase2-Backend": "1.0.0",
           "Microsoft.NET.Test.Sdk": "17.1.0",
           "Moq.AutoMock": "3.4.0",
@@ -20,6 +21,18 @@
         },
         "runtime": {
           "SectionThree.Test1.dll": {}
+        }
+      },
+      "AutoFixture/4.17.0": {
+        "dependencies": {
+          "Fare": "2.1.1",
+          "System.ComponentModel.Annotations": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AutoFixture.dll": {
+            "assemblyVersion": "4.17.0.0",
+            "fileVersion": "4.17.0.636"
+          }
         }
       },
       "Castle.Core/4.4.0": {
@@ -43,6 +56,17 @@
         }
       },
       "coverlet.collector/3.1.2": {},
+      "Fare/2.1.1": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.0"
+        },
+        "runtime": {
+          "lib/netstandard1.1/Fare.dll": {
+            "assemblyVersion": "2.1.0.0",
+            "fileVersion": "2.1.1.0"
+          }
+        }
+      },
       "Microsoft.CodeCoverage/17.1.0": {
         "runtime": {
           "lib/netcoreapp1.0/Microsoft.VisualStudio.CodeCoverage.Shim.dll": {
@@ -686,6 +710,21 @@
           "System.Runtime": "4.3.0"
         }
       },
+      "System.ComponentModel.Annotations/4.3.0": {
+        "dependencies": {
+          "System.Collections": "4.3.0",
+          "System.ComponentModel": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.Linq": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.Extensions": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Text.RegularExpressions": "4.3.0",
+          "System.Threading": "4.3.0"
+        }
+      },
       "System.ComponentModel.Primitives/4.3.0": {
         "dependencies": {
           "System.ComponentModel": "4.3.0",
@@ -1112,6 +1151,13 @@
       "serviceable": false,
       "sha512": ""
     },
+    "AutoFixture/4.17.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-efMRCG3Epc4QDELwdmQGf6/caQUleRXPRCnLAq5gLMpTuOTcOQWV12vEJ8qo678Rj97/TjjxHYu/34rGkXdVAA==",
+      "path": "autofixture/4.17.0",
+      "hashPath": "autofixture.4.17.0.nupkg.sha512"
+    },
     "Castle.Core/4.4.0": {
       "type": "package",
       "serviceable": true,
@@ -1125,6 +1171,13 @@
       "sha512": "sha512-wuLDIDKD5XMt0A7lE31JPenT7QQwZPFkP5rRpdJeblyXZ9MGLI8rYjvm5fvAKln+2/X+4IxxQDxBtwdrqKNLZw==",
       "path": "coverlet.collector/3.1.2",
       "hashPath": "coverlet.collector.3.1.2.nupkg.sha512"
+    },
+    "Fare/2.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HaI8puqA66YU7/9cK4Sgbs1taUTP1Ssa4QT2PIzqJ7GvAbN1QgkjbRsjH+FSbMh1MJdvS0CIwQNLtFT+KF6KpA==",
+      "path": "fare/2.1.1",
+      "hashPath": "fare.2.1.1.nupkg.sha512"
     },
     "Microsoft.CodeCoverage/17.1.0": {
       "type": "package",
@@ -1475,6 +1528,13 @@
       "sha512": "sha512-VyGn1jGRZVfxnh8EdvDCi71v3bMXrsu8aYJOwoV7SNDLVhiEqwP86pPMyRGsDsxhXAm2b3o9OIqeETfN5qfezw==",
       "path": "system.componentmodel/4.3.0",
       "hashPath": "system.componentmodel.4.3.0.nupkg.sha512"
+    },
+    "System.ComponentModel.Annotations/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SY2RLItHt43rd8J9D8M8e8NM4m+9WLN2uUd9G0n1I4hj/7w+v3pzK6ZBjexlG1/2xvLKQsqir3UGVSyBTXMLWA==",
+      "path": "system.componentmodel.annotations/4.3.0",
+      "hashPath": "system.componentmodel.annotations.4.3.0.nupkg.sha512"
     },
     "System.ComponentModel.Primitives/4.3.0": {
       "type": "package",

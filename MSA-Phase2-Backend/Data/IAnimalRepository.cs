@@ -4,11 +4,11 @@ namespace MSA_Phase2_Backend.Data
 {
     public interface IAnimalRepository
     {
-        List<RandomAnimal> getAllAnimal();
-        RandomAnimal getRandAnimal(Object data);
-        RandomAnimal getAnimal(int id);
-        RandomAnimal sectionOnePost(RandomAnimal animal);
-        RandomAnimal sectionOnePut(RandomAnimal request);
-        RandomAnimal demonstrateDelete(int id);
+        public Task<IEnumerable<RandomAnimal>> getAllAnimal();
+        public Task<RandomAnimal> getRandAnimal(RandomAnimal data);
+        public Task<RandomAnimal> getAnimal(int id);
+        public Task<RandomAnimal> sectionOnePost(RandomAnimal animal);
+        public Task<RandomAnimal> sectionOnePut(RandomAnimal request);
+        public Task<RandomAnimal> demonstrateDelete(int id);
     }
 }
