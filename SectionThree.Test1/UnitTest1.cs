@@ -38,15 +38,23 @@ namespace SectionThree.Test1
             }
             */
             [Fact]
-            public async Task GetAllAnimalsAsync_ShouldReturnAnimal_WhenAnimalExists()
+            public async Task GetAnimalsAsync_ShouldReturnAnimal()
             {
                 //Arrange
+                //var test = "test";
                 var testAnim = _fixture.Create<Task<RandomAnimal>>();
                 _animalRepoMock.Setup(x => x.getAnimal(1)).Returns(testAnim);
                 //Act
                 var Aninm = await _sut.GetAnimal(1);
+                var Animal = await _sut.GetAnimal(testAnim.Result.id = 1);
+                //var Animal = testAnim.Result;
+                var result = Aninm.Result.GetType().GetProperty("name");
+                var testResult = Animal.Result.GetType().GetProperty("name");
                 //Assert
-                Xunit.Assert.NotNull(Aninm);
+                //Xunit.Assert.NotNull(Aninm);
+                //testResult.Should().Be(result);
+                Xunit.Assert.Equal(result, testResult);
+                //result.Should().BeEquivalentTo(testResult);
             }
             /*
             public void CheckAnimal()

@@ -22,7 +22,15 @@ builder.Services.AddSwaggerDocument(options =>
 
 });
 
-if (builder.Environment.IsDevelopment()){
+if (builder.Environment.IsDevelopment())
+{
+    builder.Services.AddHttpClient(builder.Configuration["AnimalsClientName"], configureClient: client =>
+    {
+        client.BaseAddress = new Uri(builder.Configuration["AnimalsAddress"]);
+    });
+}
+if (builder.Environment.IsProduction())
+{
     builder.Services.AddHttpClient(builder.Configuration["AnimalsClientName"], configureClient: client =>
     {
         client.BaseAddress = new Uri(builder.Configuration["AnimalsAddress"]);
