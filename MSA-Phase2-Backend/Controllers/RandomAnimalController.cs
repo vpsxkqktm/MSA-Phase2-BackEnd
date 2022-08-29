@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using MSA_Phase2_Backend.Data;
-using MSA_Phase2_Backend.Models;
+using MSA_Phase3_Backend.Domain.Interfaces;
+using MSA_Phase3_Backend.Domain.Models;
 using System;
 
 namespace MSA_Phase2_Backend.Controllers
@@ -10,10 +10,10 @@ namespace MSA_Phase2_Backend.Controllers
     public class RandomAnimalController: ControllerBase
     {
 
-        private readonly IAnimalRepository _repository;
+        private readonly IRandomAnimalServices _repository;
         private readonly HttpClient _client;
 
-        public RandomAnimalController(IAnimalRepository repository, IHttpClientFactory clientFactory)
+        public RandomAnimalController(IRandomAnimalServices repository, IHttpClientFactory clientFactory)
         {
             _repository = repository;
             if (clientFactory is null)

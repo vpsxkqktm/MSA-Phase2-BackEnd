@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using MSA_Phase2_Backend.Data;
-using MSA_Phase2_Backend.Models;
+using MSA_Phase3_Backend.Domain.Interfaces;
+using MSA_Phase3_Backend.Domain.Models;
 using System;
 
 
@@ -12,7 +12,7 @@ namespace MSA.Phase2.AmazingApi.Controllers
     [Route("[controller]")]
     public class SectionOne : ControllerBase
     {
-        private readonly IAnimalRepository _repository;
+        private readonly IRandomAnimalServices _repository;
 
         /*private static List<RandomAnimal> randAnimals = new List<RandomAnimal>
         {
@@ -22,7 +22,7 @@ namespace MSA.Phase2.AmazingApi.Controllers
           }
         };*/
 
-        public SectionOne(IAnimalRepository repository)
+        public SectionOne(IRandomAnimalServices repository)
         { 
             _repository = repository;
         }

@@ -1,0 +1,12 @@
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\MSA-Phase3-Backend.Domain\bin\Debug\net6.0\MSA-Phase3-Backend.Domain.deps.json
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\MSA-Phase3-Backend.Domain\bin\Debug\net6.0\MSA-Phase3-Backend.Domain.dll
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\MSA-Phase3-Backend.Domain\bin\Debug\net6.0\MSA-Phase3-Backend.Domain.pdb
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\MSA-Phase3-Backend.Domain\obj\Debug\net6.0\MSA-Phase3-Backend.Domain.csproj.AssemblyReference.cache
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\MSA-Phase3-Backend.Domain\obj\Debug\net6.0\MSA-Phase3-Backend.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\MSA-Phase3-Backend.Domain\obj\Debug\net6.0\MSA-Phase3-Backend.Domain.AssemblyInfoInputs.cache
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\MSA-Phase3-Backend.Domain\obj\Debug\net6.0\MSA-Phase3-Backend.Domain.AssemblyInfo.cs
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\MSA-Phase3-Backend.Domain\obj\Debug\net6.0\MSA-Phase3-Backend.Domain.csproj.CoreCompileInputs.cache
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\MSA-Phase3-Backend.Domain\obj\Debug\net6.0\MSA-Phase3-Backend.Domain.dll
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\MSA-Phase3-Backend.Domain\obj\Debug\net6.0\refint\MSA-Phase3-Backend.Domain.dll
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\MSA-Phase3-Backend.Domain\obj\Debug\net6.0\MSA-Phase3-Backend.Domain.pdb
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\MSA-Phase3-Backend.Domain\obj\Debug\net6.0\ref\MSA-Phase3-Backend.Domain.dll

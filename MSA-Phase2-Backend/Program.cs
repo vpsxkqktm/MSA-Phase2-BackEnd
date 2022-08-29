@@ -1,6 +1,7 @@
-using MSA_Phase2_Backend.Data;
-using MSA_Phase2_Backend.Models;
 using Microsoft.EntityFrameworkCore;
+using MSA_Phase3_Backend.Domain.Interfaces;
+using MSA_Phase3_Backend.Domain.Models;
+using MSA_Phase3_Backend.Service;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,7 +12,7 @@ builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddControllers();
 builder.Services.AddDbContext<RandomAnimalDbContext>(optionts => optionts.UseInMemoryDatabase("RandAnimal"));
-builder.Services.AddScoped<IAnimalRepository, AnimalRepository>();
+builder.Services.AddScoped<IRandomAnimalServices, RandomAnimalServices>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

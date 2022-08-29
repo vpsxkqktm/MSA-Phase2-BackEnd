@@ -1696,6 +1696,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "MSA-Phase3-Backend.Domain": "1.0.0",
+          "MSA-Phase3-Backend.Service": "1.0.0",
           "Microsoft.EntityFrameworkCore.InMemory": "6.0.8",
           "NSwag.AspNetCore": "13.16.1",
           "Swashbuckle.AspNetCore": "6.4.0"
@@ -1709,6 +1711,32 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "MSA-Phase3-Backend.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.8"
+        },
+        "compile": {
+          "bin/placeholder/MSA-Phase3-Backend.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MSA-Phase3-Backend.Domain.dll": {}
+        }
+      },
+      "MSA-Phase3-Backend.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "MSA-Phase3-Backend.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MSA-Phase3-Backend.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MSA-Phase3-Backend.Service.dll": {}
+        }
       }
     }
   },
@@ -6446,6 +6474,16 @@
       "type": "project",
       "path": "../MSA-Phase2-Backend/MSA-Phase2-Backend.csproj",
       "msbuildProject": "../MSA-Phase2-Backend/MSA-Phase2-Backend.csproj"
+    },
+    "MSA-Phase3-Backend.Domain/1.0.0": {
+      "type": "project",
+      "path": "../MSA-Phase3-Backend.Domain/MSA-Phase3-Backend.Domain.csproj",
+      "msbuildProject": "../MSA-Phase3-Backend.Domain/MSA-Phase3-Backend.Domain.csproj"
+    },
+    "MSA-Phase3-Backend.Service/1.0.0": {
+      "type": "project",
+      "path": "../MSA-Phase3-Backend.Service/MSA-Phase3-Backend.Service.csproj",
+      "msbuildProject": "../MSA-Phase3-Backend.Service/MSA-Phase3-Backend.Service.csproj"
     }
   },
   "projectFileDependencyGroups": {

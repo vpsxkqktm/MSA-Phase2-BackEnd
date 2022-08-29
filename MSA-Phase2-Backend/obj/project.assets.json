@@ -975,6 +975,32 @@
         "runtime": {
           "lib/netstandard2.1/YamlDotNet.dll": {}
         }
+      },
+      "MSA-Phase3-Backend.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.8"
+        },
+        "compile": {
+          "bin/placeholder/MSA-Phase3-Backend.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MSA-Phase3-Backend.Domain.dll": {}
+        }
+      },
+      "MSA-Phase3-Backend.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "MSA-Phase3-Backend.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MSA-Phase3-Backend.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MSA-Phase3-Backend.Service.dll": {}
+        }
       }
     }
   },
@@ -4022,10 +4048,22 @@
         "yamldotnet.11.2.1.nupkg.sha512",
         "yamldotnet.nuspec"
       ]
+    },
+    "MSA-Phase3-Backend.Domain/1.0.0": {
+      "type": "project",
+      "path": "../MSA-Phase3-Backend.Domain/MSA-Phase3-Backend.Domain.csproj",
+      "msbuildProject": "../MSA-Phase3-Backend.Domain/MSA-Phase3-Backend.Domain.csproj"
+    },
+    "MSA-Phase3-Backend.Service/1.0.0": {
+      "type": "project",
+      "path": "../MSA-Phase3-Backend.Service/MSA-Phase3-Backend.Service.csproj",
+      "msbuildProject": "../MSA-Phase3-Backend.Service/MSA-Phase3-Backend.Service.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "MSA-Phase3-Backend.Domain >= 1.0.0",
+      "MSA-Phase3-Backend.Service >= 1.0.0",
       "Microsoft.EntityFrameworkCore.InMemory >= 6.0.8",
       "NSwag.AspNetCore >= 13.16.1",
       "Swashbuckle.AspNetCore >= 6.4.0"
@@ -4057,7 +4095,14 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\sd159\\source\\repos\\MSA-Phase2-Backend\\MSA-Phase3-Backend.Domain\\MSA-Phase3-Backend.Domain.csproj": {
+              "projectPath": "C:\\Users\\sd159\\source\\repos\\MSA-Phase2-Backend\\MSA-Phase3-Backend.Domain\\MSA-Phase3-Backend.Domain.csproj"
+            },
+            "C:\\Users\\sd159\\source\\repos\\MSA-Phase2-Backend\\MSA-Phase3-Backend.Service\\MSA-Phase3-Backend.Service.csproj": {
+              "projectPath": "C:\\Users\\sd159\\source\\repos\\MSA-Phase2-Backend\\MSA-Phase3-Backend.Service\\MSA-Phase3-Backend.Service.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
