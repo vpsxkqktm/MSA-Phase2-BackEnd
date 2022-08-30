@@ -1174,12 +1174,30 @@
       },
       "MSA-Phase2-Backend/1.0.0": {
         "dependencies": {
+          "MSA-Phase3-Backend.Domain": "1.0.0",
+          "MSA-Phase3-Backend.Service": "1.0.0",
           "Microsoft.EntityFrameworkCore.InMemory": "6.0.8",
           "NSwag.AspNetCore": "13.16.1",
           "Swashbuckle.AspNetCore": "6.4.0"
         },
         "runtime": {
           "MSA-Phase2-Backend.dll": {}
+        }
+      },
+      "MSA-Phase3-Backend.Domain/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.8"
+        },
+        "runtime": {
+          "MSA-Phase3-Backend.Domain.dll": {}
+        }
+      },
+      "MSA-Phase3-Backend.Service/1.0.0": {
+        "dependencies": {
+          "MSA-Phase3-Backend.Domain": "1.0.0"
+        },
+        "runtime": {
+          "MSA-Phase3-Backend.Service.dll": {}
         }
       }
     }
@@ -1933,6 +1951,16 @@
       "hashPath": "yamldotnet.11.2.1.nupkg.sha512"
     },
     "MSA-Phase2-Backend/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MSA-Phase3-Backend.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MSA-Phase3-Backend.Service/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

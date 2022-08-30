@@ -1,0 +1,15 @@
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\MSA-Phase3-Backend.Dal\bin\Debug\net6.0\MSA-Phase3-Backend.Dal.deps.json
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\MSA-Phase3-Backend.Dal\bin\Debug\net6.0\MSA-Phase3-Backend.Dal.dll
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\MSA-Phase3-Backend.Dal\bin\Debug\net6.0\MSA-Phase3-Backend.Dal.pdb
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\MSA-Phase3-Backend.Dal\bin\Debug\net6.0\MSA-Phase3-Backend.Domain.dll
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\MSA-Phase3-Backend.Dal\bin\Debug\net6.0\MSA-Phase3-Backend.Domain.pdb
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\MSA-Phase3-Backend.Dal\obj\Debug\net6.0\MSA-Phase3-Backend.Dal.csproj.AssemblyReference.cache
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\MSA-Phase3-Backend.Dal\obj\Debug\net6.0\MSA-Phase3-Backend.Dal.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\MSA-Phase3-Backend.Dal\obj\Debug\net6.0\MSA-Phase3-Backend.Dal.AssemblyInfoInputs.cache
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\MSA-Phase3-Backend.Dal\obj\Debug\net6.0\MSA-Phase3-Backend.Dal.AssemblyInfo.cs
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\MSA-Phase3-Backend.Dal\obj\Debug\net6.0\MSA-Phase3-Backend.Dal.csproj.CoreCompileInputs.cache
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\MSA-Phase3-Backend.Dal\obj\Debug\net6.0\MSA-Phase3-Backend.Dal.csproj.CopyComplete
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\MSA-Phase3-Backend.Dal\obj\Debug\net6.0\MSA-Phase3-Backend.Dal.dll
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\MSA-Phase3-Backend.Dal\obj\Debug\net6.0\refint\MSA-Phase3-Backend.Dal.dll
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\MSA-Phase3-Backend.Dal\obj\Debug\net6.0\MSA-Phase3-Backend.Dal.pdb
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\MSA-Phase3-Backend.Dal\obj\Debug\net6.0\ref\MSA-Phase3-Backend.Dal.dll

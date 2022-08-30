@@ -1,0 +1,12 @@
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\MSA-Phase3-Backend.Infrastructure\bin\Debug\net6.0\MSA-Phase3-Backend.Infrastructure.deps.json
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\MSA-Phase3-Backend.Infrastructure\bin\Debug\net6.0\MSA-Phase3-Backend.Infrastructure.dll
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\MSA-Phase3-Backend.Infrastructure\bin\Debug\net6.0\MSA-Phase3-Backend.Infrastructure.pdb
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\MSA-Phase3-Backend.Infrastructure\obj\Debug\net6.0\MSA-Phase3-Backend.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\MSA-Phase3-Backend.Infrastructure\obj\Debug\net6.0\MSA-Phase3-Backend.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\MSA-Phase3-Backend.Infrastructure\obj\Debug\net6.0\MSA-Phase3-Backend.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\MSA-Phase3-Backend.Infrastructure\obj\Debug\net6.0\MSA-Phase3-Backend.Infrastructure.AssemblyInfo.cs
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\MSA-Phase3-Backend.Infrastructure\obj\Debug\net6.0\MSA-Phase3-Backend.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\MSA-Phase3-Backend.Infrastructure\obj\Debug\net6.0\MSA-Phase3-Backend.Infrastructure.dll
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\MSA-Phase3-Backend.Infrastructure\obj\Debug\net6.0\refint\MSA-Phase3-Backend.Infrastructure.dll
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\MSA-Phase3-Backend.Infrastructure\obj\Debug\net6.0\MSA-Phase3-Backend.Infrastructure.pdb
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\MSA-Phase3-Backend.Infrastructure\obj\Debug\net6.0\ref\MSA-Phase3-Backend.Infrastructure.dll

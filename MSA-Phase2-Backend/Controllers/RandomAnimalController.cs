@@ -32,13 +32,9 @@ namespace MSA_Phase2_Backend.Controllers
         [ProducesResponseType(200)]
         public async Task<ActionResult<RandomAnimal>> GetRandomAnimal()
         {
-            //RandomAnimal randAnimal;
             var res = await _client.GetAsync("rand");
-            //var content = await res.Content.ReadAsStringAsync();
-            //animals = await res.Content.ReadFromJsonAsync<RandomAnimal>();
             var result = await res.Content.ReadFromJsonAsync<RandomAnimal>();
             _repository.getRandAnimal(result);
-            //randAnimals.Add(randAnimal);
             return Ok(result);
         }
     }

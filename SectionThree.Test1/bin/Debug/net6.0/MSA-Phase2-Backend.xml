@@ -23,13 +23,13 @@
             Get animal from API
             </summary>
         </member>
-        <member name="M:MSA.Phase2.AmazingApi.Controllers.SectionOne.SectionOnePost(MSA_Phase2_Backend.Models.RandomAnimal)">
+        <member name="M:MSA.Phase2.AmazingApi.Controllers.SectionOne.SectionOnePost(MSA_Phase3_Backend.Domain.Models.RandomAnimal)">
             <summary>
             Section posting action to add animals
             </summary>
             <returns>A 201 Created response</returns>
         </member>
-        <member name="M:MSA.Phase2.AmazingApi.Controllers.SectionOne.SectionOnePut(MSA_Phase2_Backend.Models.RandomAnimal)">
+        <member name="M:MSA.Phase2.AmazingApi.Controllers.SectionOne.SectionOnePut(MSA_Phase3_Backend.Domain.Models.RandomAnimal)">
             <summary>
             SectionOne put action to update exist animal
             </summary>

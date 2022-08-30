@@ -14,13 +14,7 @@ namespace MSA.Phase2.AmazingApi.Controllers
     {
         private readonly IRandomAnimalServices _repository;
 
-        /*private static List<RandomAnimal> randAnimals = new List<RandomAnimal>
-        {
-          new RandomAnimal
-          {
 
-          }
-        };*/
 
         public SectionOne(IRandomAnimalServices repository)
         { 
@@ -94,7 +88,7 @@ namespace MSA.Phase2.AmazingApi.Controllers
         /// <returns>A 201 Created Response></returns>
         [HttpPut]
         [ProducesResponseType(201)]
-        public async Task<ActionResult<IEnumerable<RandomAnimal>>> SectionOnePut(RandomAnimal request)
+        public async Task<ActionResult<RandomAnimal>> SectionOnePut(RandomAnimal request)
         {
             var result = _repository.sectionOnePut(request);
             if (result == null)
