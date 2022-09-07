@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "i/ZbNXloKa7fhj9n4/mgZHWkrzPAWqQkcyuY6A9nmRMuchpcyDCq5f8p2B18RO2gKrVTYAj+dOrVDwwvCKyYLg==",
+  "dgSpecHash": "UAvb62oPYw5S/Lt/Mbm9rZsh5tFASGsa5U3pH3ipbV7C6eBdPsuorOEWTBonHi6b1ez4nCR6OFqI5EGYjetIQA==",
   "success": true,
   "projectFilePath": "C:\\Users\\sd159\\source\\repos\\MSA-Phase2-Backend\\MSA-Phase2-Backend\\MSA-Phase2-Backend.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\sd159\\.nuget\\packages\\microsoft.csharp\\4.4.1\\microsoft.csharp.4.4.1.nupkg.sha512",
+    "C:\\Users\\sd159\\.nuget\\packages\\graphql\\7.0.2\\graphql.7.0.2.nupkg.sha512",
+    "C:\\Users\\sd159\\.nuget\\packages\\graphql-parser\\8.1.0\\graphql-parser.8.1.0.nupkg.sha512",
+    "C:\\Users\\sd159\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\sd159\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.8\\microsoft.entityframeworkcore.6.0.8.nupkg.sha512",
     "C:\\Users\\sd159\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.8\\microsoft.entityframeworkcore.abstractions.6.0.8.nupkg.sha512",
     "C:\\Users\\sd159\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\6.0.8\\microsoft.entityframeworkcore.analyzers.6.0.8.nupkg.sha512",
@@ -39,6 +41,7 @@
     "C:\\Users\\sd159\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.4.0\\swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512",
     "C:\\Users\\sd159\\.nuget\\packages\\system.collections\\4.0.11\\system.collections.4.0.11.nupkg.sha512",
     "C:\\Users\\sd159\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
+    "C:\\Users\\sd159\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512",
     "C:\\Users\\sd159\\.nuget\\packages\\system.diagnostics.debug\\4.0.11\\system.diagnostics.debug.4.0.11.nupkg.sha512",
     "C:\\Users\\sd159\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
     "C:\\Users\\sd159\\.nuget\\packages\\system.diagnostics.tools\\4.0.1\\system.diagnostics.tools.4.0.1.nupkg.sha512",
