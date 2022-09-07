@@ -1,0 +1,17 @@
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\MSA-Phase3-Backend.Service\bin\Release\net6.0\MSA-Phase3-Backend.Service.deps.json
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\MSA-Phase3-Backend.Service\bin\Release\net6.0\MSA-Phase3-Backend.Service.dll
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\MSA-Phase3-Backend.Service\bin\Release\net6.0\MSA-Phase3-Backend.Service.pdb
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\MSA-Phase3-Backend.Service\bin\Release\net6.0\MSA-Phase3-Backend.Dal.dll
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\MSA-Phase3-Backend.Service\bin\Release\net6.0\MSA-Phase3-Backend.Domain.dll
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\MSA-Phase3-Backend.Service\bin\Release\net6.0\MSA-Phase3-Backend.Dal.pdb
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\MSA-Phase3-Backend.Service\bin\Release\net6.0\MSA-Phase3-Backend.Domain.pdb
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\MSA-Phase3-Backend.Service\obj\Release\net6.0\MSA-Phase3-Backend.Service.csproj.AssemblyReference.cache
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\MSA-Phase3-Backend.Service\obj\Release\net6.0\MSA-Phase3-Backend.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\MSA-Phase3-Backend.Service\obj\Release\net6.0\MSA-Phase3-Backend.Service.AssemblyInfoInputs.cache
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\MSA-Phase3-Backend.Service\obj\Release\net6.0\MSA-Phase3-Backend.Service.AssemblyInfo.cs
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\MSA-Phase3-Backend.Service\obj\Release\net6.0\MSA-Phase3-Backend.Service.csproj.CoreCompileInputs.cache
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\MSA-Phase3-Backend.Service\obj\Release\net6.0\MSA-Phase3-Backend.Service.csproj.CopyComplete
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\MSA-Phase3-Backend.Service\obj\Release\net6.0\MSA-Phase3-Backend.Service.dll
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\MSA-Phase3-Backend.Service\obj\Release\net6.0\refint\MSA-Phase3-Backend.Service.dll
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\MSA-Phase3-Backend.Service\obj\Release\net6.0\MSA-Phase3-Backend.Service.pdb
+C:\Users\sd159\source\repos\MSA-Phase2-Backend\MSA-Phase3-Backend.Service\obj\Release\net6.0\ref\MSA-Phase3-Backend.Service.dll
