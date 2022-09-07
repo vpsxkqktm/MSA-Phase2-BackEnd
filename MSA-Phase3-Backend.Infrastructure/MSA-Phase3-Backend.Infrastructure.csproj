@@ -7,4 +7,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="HotChocolate.AspNetCore" Version="12.13.1" />
+    <PackageReference Include="HotChocolate.Data.EntityFramework" Version="12.13.1" />
+  </ItemGroup>
+
 </Project>

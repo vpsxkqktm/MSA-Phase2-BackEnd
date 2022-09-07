@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MSA_Phase3_Backend.Domain.Models
+﻿namespace MSA_Phase3_Backend.Domain.Models
 {
     public class RandomAnimal
     {

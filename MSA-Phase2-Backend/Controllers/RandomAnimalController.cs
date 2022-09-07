@@ -34,7 +34,7 @@ namespace MSA_Phase2_Backend.Controllers
         {
             var res = await _client.GetAsync("rand");
             var result = await res.Content.ReadFromJsonAsync<RandomAnimal>();
-            _repository.getRandAnimal(result);
+            await _repository.getRandAnimal(result);
             return Ok(result);
         }
     }

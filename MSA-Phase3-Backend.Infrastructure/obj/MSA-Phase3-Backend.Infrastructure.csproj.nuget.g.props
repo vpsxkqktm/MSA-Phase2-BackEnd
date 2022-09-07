@@ -12,4 +12,8 @@
   <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <SourceRoot Include="C:\Users\sd159\.nuget\packages\" />
   </ItemGroup>
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)hotchocolate.data.entityframework\12.13.1\build\HotChocolate.Data.EntityFramework.props" Condition="Exists('$(NuGetPackageRoot)hotchocolate.data.entityframework\12.13.1\build\HotChocolate.Data.EntityFramework.props')" />
+    <Import Project="$(NuGetPackageRoot)hotchocolate.aspnetcore\12.13.1\build\HotChocolate.AspNetCore.props" Condition="Exists('$(NuGetPackageRoot)hotchocolate.aspnetcore\12.13.1\build\HotChocolate.AspNetCore.props')" />
+  </ImportGroup>
 </Project>

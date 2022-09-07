@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MSA_Phase3_Backend.Domain.Models;
+﻿using MSA_Phase3_Backend.Domain.Models;
 
 namespace MSA_Phase3_Backend.Domain.Interfaces
 {

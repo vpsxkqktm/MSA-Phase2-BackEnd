@@ -28,6 +28,9 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+              "C:\\Users\\sd159\\source\\repos\\MSA-Phase2-Backend\\MSA-Phase3-Backend.Dal\\MSA-Phase3-Backend.Dal.csproj": {
+                "projectPath": "C:\\Users\\sd159\\source\\repos\\MSA-Phase2-Backend\\MSA-Phase3-Backend.Dal\\MSA-Phase3-Backend.Dal.csproj"
+              },
               "C:\\Users\\sd159\\source\\repos\\MSA-Phase2-Backend\\MSA-Phase3-Backend.Domain\\MSA-Phase3-Backend.Domain.csproj": {
                 "projectPath": "C:\\Users\\sd159\\source\\repos\\MSA-Phase2-Backend\\MSA-Phase3-Backend.Domain\\MSA-Phase3-Backend.Domain.csproj"
               },
@@ -47,9 +50,13 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "GraphQL": {
+            "HotChocolate.AspNetCore": {
               "target": "Package",
-              "version": "[7.0.2, )"
+              "version": "[12.13.1, )"
+            },
+            "HotChocolate.Data.EntityFramework": {
+              "target": "Package",
+              "version": "[12.13.1, )"
             },
             "Microsoft.EntityFrameworkCore.InMemory": {
               "target": "Package",
@@ -78,6 +85,74 @@
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
             },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\sd159\\source\\repos\\MSA-Phase2-Backend\\MSA-Phase3-Backend.Dal\\MSA-Phase3-Backend.Dal.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\sd159\\source\\repos\\MSA-Phase2-Backend\\MSA-Phase3-Backend.Dal\\MSA-Phase3-Backend.Dal.csproj",
+        "projectName": "MSA-Phase3-Backend.Dal",
+        "projectPath": "C:\\Users\\sd159\\source\\repos\\MSA-Phase2-Backend\\MSA-Phase3-Backend.Dal\\MSA-Phase3-Backend.Dal.csproj",
+        "packagesPath": "C:\\Users\\sd159\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sd159\\source\\repos\\MSA-Phase2-Backend\\MSA-Phase3-Backend.Dal\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\sd159\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\sd159\\source\\repos\\MSA-Phase2-Backend\\MSA-Phase3-Backend.Domain\\MSA-Phase3-Backend.Domain.csproj": {
+                "projectPath": "C:\\Users\\sd159\\source\\repos\\MSA-Phase2-Backend\\MSA-Phase3-Backend.Domain\\MSA-Phase3-Backend.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "HotChocolate.AspNetCore": {
+              "target": "Package",
+              "version": "[12.13.1, )"
+            },
+            "HotChocolate.Data.EntityFramework": {
+              "target": "Package",
+              "version": "[12.13.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
@@ -122,6 +197,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "HotChocolate.AspNetCore": {
+              "target": "Package",
+              "version": "[12.13.1, )"
+            },
+            "HotChocolate.Data.EntityFramework": {
+              "target": "Package",
+              "version": "[12.13.1, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.8, )"
@@ -170,6 +253,9 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+              "C:\\Users\\sd159\\source\\repos\\MSA-Phase2-Backend\\MSA-Phase3-Backend.Dal\\MSA-Phase3-Backend.Dal.csproj": {
+                "projectPath": "C:\\Users\\sd159\\source\\repos\\MSA-Phase2-Backend\\MSA-Phase3-Backend.Dal\\MSA-Phase3-Backend.Dal.csproj"
+              },
               "C:\\Users\\sd159\\source\\repos\\MSA-Phase2-Backend\\MSA-Phase3-Backend.Domain\\MSA-Phase3-Backend.Domain.csproj": {
                 "projectPath": "C:\\Users\\sd159\\source\\repos\\MSA-Phase2-Backend\\MSA-Phase3-Backend.Domain\\MSA-Phase3-Backend.Domain.csproj"
               }
@@ -185,6 +271,16 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "HotChocolate.AspNetCore": {
+              "target": "Package",
+              "version": "[12.13.1, )"
+            },
+            "HotChocolate.Data.EntityFramework": {
+              "target": "Package",
+              "version": "[12.13.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

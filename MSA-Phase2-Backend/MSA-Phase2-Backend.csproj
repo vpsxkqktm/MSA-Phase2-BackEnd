@@ -9,13 +9,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="GraphQL" Version="7.0.2" />
+    <PackageReference Include="HotChocolate.AspNetCore" Version="12.13.1" />
+    <PackageReference Include="HotChocolate.Data.EntityFramework" Version="12.13.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="6.0.8" />
     <PackageReference Include="NSwag.AspNetCore" Version="13.16.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MSA-Phase3-Backend.Dal\MSA-Phase3-Backend.Dal.csproj" />
     <ProjectReference Include="..\MSA-Phase3-Backend.Domain\MSA-Phase3-Backend.Domain.csproj" />
     <ProjectReference Include="..\MSA-Phase3-Backend.Service\MSA-Phase3-Backend.Service.csproj" />
   </ItemGroup>

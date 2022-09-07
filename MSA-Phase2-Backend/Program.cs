@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using MSA_Phase3_Backend.Dal;
 using MSA_Phase3_Backend.Domain.Interfaces;
 using MSA_Phase3_Backend.Domain.Models;
 using MSA_Phase3_Backend.Service;
@@ -13,12 +14,13 @@ builder.Services.AddHttpContextAccessor();
 builder.Services.AddControllers();
 builder.Services.AddDbContext<RandomAnimalDbContext>(optionts => optionts.UseInMemoryDatabase("RandAnimal"));
 builder.Services.AddScoped<IRandomAnimalServices, RandomAnimalServices>();
+builder.Services.AddGraphQLServer().AddQueryType<Query>().AddProjections().AddFiltering().AddSorting();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSwaggerDocument(options =>
 {
-    options.DocumentName = "My Amazing API";
+    options.DocumentName = "msa";
     options.Version = "V1";
 
 });
@@ -76,9 +78,8 @@ app.UseSwaggerUi3();
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
-
+app.MapGraphQL("/graphql");
 app.MapControllers();
-
 app.Run();
 
 
